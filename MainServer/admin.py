@@ -4,14 +4,14 @@ from .models import FuelStation, Fuel, FuelPrices
 
 @admin.register(FuelStation)
 class FuelStationAdmin(admin.ModelAdmin):
-    list_display = ("Station_ID", "Address")
+    list_display = ("station_id", "address")
 
 
 @admin.register(Fuel)
 class FuelAdmin(admin.ModelAdmin):
-    list_display = ("Fuel_ID", "Name")
+    list_display = ("fuel_id", "name")
 
 
 @admin.register(FuelPrices)
 class FuelPricesAdmin(admin.ModelAdmin):
-    list_display = ("Station_ID", "Fuel_ID", "Price", "AmountOfFuel")
+    list_display = ("station", "fuel", "price", "amount")
