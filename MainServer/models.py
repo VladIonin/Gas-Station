@@ -20,5 +20,5 @@ class Fuel(models.Model):
 class FuelPrices(models.Model):
     station = models.ForeignKey(FuelStation, on_delete=models.CASCADE)
     fuel = models.ForeignKey(Fuel, on_delete=models.CASCADE)
-    price = models.DecimalField(max_digits=5, decimal_places=2)
-    amount = models.PositiveIntegerField()
+    price = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+    amount = models.PositiveIntegerField(default=0)

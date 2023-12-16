@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('stations/', views.get_stations_by_fuel, name='get_stations_by_fuel'),
     path('getStationInfo/', views.get_station_info, name='get_station_info'),
+    path('setStation/', views.set_station, name='set_station_info')
 ]
