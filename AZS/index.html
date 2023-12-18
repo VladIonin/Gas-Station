@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Station Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container my-4">
+    <form class="input-group mb-4" id="form" action="">
+        <input type="text" id="stationId" class="form-control bg-light" placeholder="Введите ID станции">
+        <button type='submit' class="btn btn-dark px-3">
+            Загрузить данные
+        </button>
+    </form>
+
+    <form id="stationInfo" style="display: none;">
+        <h3 id="stationTitle"></h3>
+        <input id="address" type="text" class="form-control mb-2" placeholder="Адрес АЗС">
+        <div class="row g-2 mb-4">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header bg-danger text-white">АИ-92</h5>
+                    <div class="card-body bg-light">
+                        <label class="form-label">Цена:</label>
+                        <input id="price92" type="text" class="form-control mb-2" placeholder="рубли">
+                        <label class="form-label">Остаток:</label>
+                        <input id="amount92" type="text" class="form-control" placeholder="литры">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header bg-success text-white">АИ-95</h5>
+                    <div class="card-body bg-light">
+                        <label class="form-label">Цена:</label>
+                        <input id="price95" type="text" class="form-control mb-2" placeholder="рубли">
+                        <label class="form-label">Остаток:</label>
+                        <input id="amount95" type="text" class="form-control" placeholder="литры">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header bg-primary text-white">АИ-98</h5>
+                    <div class="card-body bg-light">
+                        <label class="form-label">Цена:</label>
+                        <input id="price98" type="text" class="form-control mb-2" placeholder="рубли">
+                        <label class="form-label">Остаток:</label>
+                        <input id="amount98" type="text" class="form-control" placeholder="литры">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header bg-dark text-white">ДТ</h5>
+                    <div class="card-body bg-light">
+                        <label class="form-label">Цена:</label>
+                        <input id="priceDT" type="text" class="form-control mb-2" placeholder="рубли">
+                        <label class="form-label">Остаток:</label>
+                        <input id="amountDT" type="text" class="form-control" placeholder="литры">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type='submit' class="w-100 btn btn-warning btn-lg">Сохранить изменения</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
