@@ -8,13 +8,24 @@ document.getElementById('stationInfo').addEventListener('submit', function (even
     saveChanges();
 });
 
+function validateStationId(stationId) {
+    const id = parseInt(stationId, 10);
+    return !isNaN(id) && id >= 1 && id <= 99;
+}
+
 function loadData() {
     const stationId = document.getElementById('stationId').value;
+
+    if (!validateStationId(stationId)) {
+        alert('В поле ID принимаются значения от 1 до 99.');
+        return;
+    }
+
     fetch(`http://127.0.0.1:8080/getStationInfo?id=${stationId}`)
         .then(response => {
             if (response.status === 404) {
                 // Station not found, clear input fields and display a message
-                document.getElementById('stationTitle').innerText = `АЗС №${stationId} not found - creating new record`;
+                document.getElementById('stationTitle').innerText = `АЗС №${stationId} не найдена - создайте новую запись`;
                 clearInputFields();
                 document.getElementById('stationInfo').style.display = 'block';
             } else if (!response.ok) {
