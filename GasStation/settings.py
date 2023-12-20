@@ -126,7 +126,7 @@ FUEL_TYPE_MAPPING = {
     '92': 1,
     '95': 2,
     '98': 3,
-    'DT': 4,
+    'DF': 4,
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
